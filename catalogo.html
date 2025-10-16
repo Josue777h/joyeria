@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo • Joyería Indio</title>
+  <meta name="description" content="Catálogo de joyas: pulseras, anillos, cadenas y topos." />
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script src="./assets/tw-config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-ebony text-ivory">
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-ebony/70 border-b border-brown">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="IMG-20251002-WA0057/logo.png" alt="Logo Joyería Indio" class="h-8 w-8 rounded-full object-contain"/>
+        <span class="text-xl sm:text-2xl font-display tracking-wide text-goldBright">Joyería Indio</span>
+      </a>
+      <nav class="hidden sm:flex gap-6 text-sm text-ivory/80">
+        <a href="index.html" class="hover:text-goldBright">Inicio</a>
+        <a href="catalogo.html" class="text-goldBright">Catálogo</a>
+        <a href="contacto.html" class="hover:text-goldBright">Contáctanos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-24 sm:pt-28">
+    <section class="categories-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle"><span>NUESTRO CATÁLOGO</span></div>
+          <h1 class="section-title">Explora por <span>Categoría</span></h1>
+          <p class="section-description">Selecciona una categoría y navega por nuestras piezas</p>
+        </div>
+
+        <div class="categories-grid">
+          <button class="category-card active" data-filter="all">
+            <div class="category-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+              </svg>
+            </div>
+            <span class="category-name">Todo</span>
+            <span class="category-count">Todas</span>
+            <div class="category-glow"></div>
+          </button>
+
+          <button class="category-card" data-filter="pulseras">
+            <div class="category-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+            </div>
+            <span class="category-name">Pulseras</span>
+            <span class="category-count">Varias</span>
+            <div class="category-glow"></div>
+          </button>
+
+          <button class="category-card" data-filter="anillos">
+            <div class="category-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+              </svg>
+            </div>
+            <span class="category-name">Anillos</span>
+            <span class="category-count">Varias</span>
+            <div class="category-glow"></div>
+          </button>
+
+          <button class="category-card" data-filter="cadenas">
+            <div class="category-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+              </svg>
+            </div>
+            <span class="category-name">Cadenas</span>
+            <span class="category-count">Pronto</span>
+            <div class="category-glow"></div>
+          </button>
+
+          <button class="category-card" data-filter="topos">
+            <div class="category-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+              </svg>
+            </div>
+            <span class="category-name">Topos</span>
+            <span class="category-count">Varias</span>
+            <div class="category-glow"></div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 sm:py-14">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-4 flex flex-col sm:flex-row gap-3 justify-between items-stretch sm:items-center">
+          <input id="catalogSearch" type="search" placeholder="Buscar por nombre (ej: Anillo, Pulsera)" class="w-full sm:max-w-md px-4 py-2 rounded-lg border border-brown bg-white/5 text-ivory placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-gold-600"/>
+        </div>
+        <div id="galleryGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4"></div>
+        <div id="catalogPagination" class="mt-6 flex items-center justify-center gap-2"></div>
+        <div id="emptyState" class="hidden mt-12 text-center text-neutral-400">No hay imágenes para esta categoría todavía.</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Product Detail Modal -->
+  <div id="productModal" class="fixed inset-0 z-[60] hidden product-modal">
+    <div id="productModalOverlay" class="absolute inset-0 modal-overlay"></div>
+    <div class="absolute inset-0 flex items-center justify-center p-4">
+      <div class="w-full max-w-3xl rounded-2xl overflow-hidden modal-panel">
+        <div class="modal-header">
+          <h3 id="pmTitle" class="text-lg font-semibold">Producto</h3>
+          <button id="pmClose" class="w-9 h-9 rounded-full hover:bg-white/5 flex items-center justify-center" aria-label="Cerrar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="grid md:grid-cols-2 gap-0">
+          <div class="aspect-square modal-media">
+            <img id="pmImage" src="" alt="" class="w-full h-full object-cover"/>
+          </div>
+          <div class="p-4 md:p-6 flex flex-col gap-4">
+            <div>
+              <h4 id="pmName" class="text-2xl font-medium"></h4>
+              <p id="pmPrice" class="text-gold-300 text-xl font-semibold mt-1"></p>
+            </div>
+            <p id="pmDesc" class="text-neutral-300 text-sm leading-relaxed">Consulta disponibilidad, tallas y tiempos de entrega. Pide tu cotización personalizada por WhatsApp.</p>
+            <div class="mt-auto flex flex-col sm:flex-row gap-3">
+              <a id="pmBuy" href="#contacto" class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer py-10 text-ivory/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="flex items-center gap-3 mb-3">
+            <img src="IMG-20251002-WA0057/logo.png" alt="Logo Joyería Indio" class="h-8 w-8 rounded-full object-contain"/>
+            <span class="text-lg font-display text-goldBright">Joyería Indio</span>
+          </div>
+          <p class="text-ivory/70 text-sm">Lujo atemporal en oro 18k. Atención personalizada y garantía de por vida.</p>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">Navegación</div>
+          <a href="index.html" class="footer-link">Inicio</a>
+          <a href="catalogo.html" class="footer-link">Catálogo</a>
+          <a href="contacto.html" class="footer-link">Contáctanos</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">Contacto</div>
+          <a href="https://wa.me/573143243707" target="_blank" rel="noopener" class="footer-link">WhatsApp: 314 324 3707</a>
+          <a href="mailto:contacto@joyeriaindio.com" class="footer-link">contacto@joyeriaindio.com</a>
+          <a href="#" class="footer-link">Medellín, Colombia</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span id="year"></span> Joyería Indio. Todos los derechos reservados.</div>
+        <div class="payments-row" aria-label="Métodos de pago aceptados">
+          <span class="pay-logo" title="Visa">
+            <svg viewBox="0 0 72 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="72" height="24" rx="6" fill="rgba(255,255,255,0.06)"/>
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#f5e6b6" font-family="Inter, Arial" font-weight="700" font-size="12">VISA</text>
+            </svg>
+          </span>
+          <span class="pay-logo" title="Bancolombia">
+            <svg viewBox="0 0 120 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="120" height="24" rx="6" fill="rgba(255,255,255,0.06)"/>
+              <circle cx="16" cy="12" r="6" fill="#f5e6b6"/>
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#f5e6b6" font-family="Inter, Arial" font-weight="700" font-size="10">Bancolombia</text>
+            </svg>
+          </span>
+          <span class="pay-logo" title="Nequi">
+            <svg viewBox="0 0 72 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="72" height="24" rx="6" fill="rgba(255,255,255,0.06)"/>
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#f5e6b6" font-family="Inter, Arial" font-weight="700" font-size="12">NEQUI</text>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>
