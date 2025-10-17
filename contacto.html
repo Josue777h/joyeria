@@ -21,8 +21,19 @@
         <a href="catalogo.html" class="hover:text-goldBright">Catálogo</a>
         <a href="contacto.html" class="text-goldBright">Contáctanos</a>
       </nav>
+      <button id="mobileMenuBtn" class="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-brown text-ivory/90 hover:text-goldBright hover:border-gold-600" aria-label="Abrir menú">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
     </div>
   </header>
+
+  <nav id="mobileMenu" class="sm:hidden hidden fixed top-16 inset-x-0 z-40 bg-ebony/95 border-b border-brown backdrop-blur">
+    <div class="px-4 py-4 flex flex-col gap-4 text-sm">
+      <a href="index.html" class="text-ivory/90 hover:text-goldBright">Inicio</a>
+      <a href="catalogo.html" class="text-ivory/90 hover:text-goldBright">Catálogo</a>
+      <a href="contacto.html" class="text-ivory/90 hover:text-goldBright">Contáctanos</a>
+    </div>
+  </nav>
 
   <main class="pt-24 sm:pt-28">
     <!-- Encabezado -->
