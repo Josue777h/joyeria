@@ -25,8 +25,19 @@
         <a href="catalogo.html" class="hover:text-goldBright transition">Catálogo</a>
         <a href="contacto.html" class="hover:text-goldBright transition">Contáctanos</a>
       </nav>
+      <button id="mobileMenuBtn" class="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-brown text-ivory/90 hover:text-goldBright hover:border-gold-600" aria-label="Abrir menú">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
     </div>
   </header>
+
+  <nav id="mobileMenu" class="sm:hidden hidden fixed top-16 inset-x-0 z-40 bg-ebony/95 border-b border-brown backdrop-blur">
+    <div class="px-4 py-4 flex flex-col gap-4 text-sm">
+      <a href="index.html" class="text-ivory/90 hover:text-goldBright">Inicio</a>
+      <a href="catalogo.html" class="text-ivory/90 hover:text-goldBright">Catálogo</a>
+      <a href="contacto.html" class="text-ivory/90 hover:text-goldBright">Contáctanos</a>
+    </div>
+  </nav>
 
   <!-- Hero -->
   <section class="hero-section">
@@ -368,6 +379,36 @@
       <div id="emptyState" class="hidden mt-12 text-center text-neutral-400">No hay imágenes para esta categoría todavía.</div>
     </div>
   </section>
+
+  <!-- Product Detail Modal (for gallery "Ver") -->
+  <div id="productModal" class="fixed inset-0 z-[60] hidden product-modal">
+    <div id="productModalOverlay" class="absolute inset-0 modal-overlay"></div>
+    <div class="absolute inset-0 flex items-center justify-center p-4">
+      <div class="w-full max-w-3xl rounded-2xl overflow-hidden modal-panel">
+        <div class="modal-header">
+          <h3 id="pmTitle" class="text-lg font-semibold">Producto</h3>
+          <button id="pmClose" class="w-9 h-9 rounded-full hover:bg-white/5 flex items-center justify-center" aria-label="Cerrar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="grid grid-cols-2 gap-0">
+          <div class="aspect-square modal-media">
+            <img id="pmImage" src="" alt="" class="w-full h-full object-cover"/>
+          </div>
+          <div class="p-4 md:p-6 flex flex-col gap-4">
+            <div>
+              <h4 id="pmName" class="text-2xl font-medium"></h4>
+              <p id="pmPrice" class="text-gold-300 text-xl font-semibold mt-1"></p>
+            </div>
+            <p id="pmDesc" class="text-neutral-300 text-sm leading-relaxed">Consulta disponibilidad, tallas y tiempos de entrega. Pide tu cotización personalizada por WhatsApp.</p>
+            <div class="mt-auto flex flex-col sm:flex-row gap-3">
+              <a id="pmBuy" href="#contacto" class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- CTA / Contacto -->
   <section id="contacto" class="contact-section">

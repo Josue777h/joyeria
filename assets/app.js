@@ -254,7 +254,7 @@ function renderGallery(filter) {
     const buyAttrs = wa ? 'target="_blank" rel="noopener"' : '';
     return (
     `<article class="relative overflow-hidden rounded-xl border border-brown/40 bg-black/20 group">
-       <img src="${i.src}" alt="${i.name}" class="w-full h-48 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-105"/>
+       <img src="${i.src}" alt="${i.name}" loading="lazy" class="w-full h-48 sm:h-56 object-cover transition-transform duration-500 group-hover:scale-105"/>
        <div class="p-3 flex items-center justify-between">
          <h3 class="text-sm sm:text-base font-medium text-ivory/90 truncate">${i.name}</h3>
          <span class="text-gold-300 text-sm font-semibold">${formatPrice(i.price)}</span>
@@ -411,3 +411,54 @@ document.addEventListener('keydown', (e) => {
     closeProductModal();
   }
 });
+
+// ========== GLOBAL: Footer Year & Mobile Menu ==========
+// Set current year in footer if element exists
+const yearEl = document.getElementById('year');
+if (yearEl) {
+  try { yearEl.textContent = new Date().getFullYear(); } catch {}
+}
+
+// Mobile menu toggle (available on all pages)
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+function toggleMobileMenu(forceState) {
+  if (!mobileMenu) return;
+  const willOpen = forceState !== undefined ? forceState : mobileMenu.classList.contains('hidden');
+  if (willOpen) {
+    mobileMenu.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  } else {
+    mobileMenu.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+}
+
+if (mobileMenuBtn && mobileMenu) {
+  mobileMenuBtn.addEventListener('click', () => toggleMobileMenu());
+  // Close menu when a link inside is clicked
+  mobileMenu.addEventListener('click', (e) => {
+    const a = e.target.closest('a');
+    if (a) toggleMobileMenu(false);
+  });
+  // Close with ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) toggleMobileMenu(false);
+  });
+  // Close on resize to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 640) toggleMobileMenu(false);
+  });
+}
+
+// ========== FEATURED CARDS -> OPEN MODAL ==========
+// Allow opening the modal by tapping the featured card (but not when clicking its CTA link)
+try {
+  const featuredContainer = document.querySelector('.featured-section');
+  if (featuredContainer && productModal) {
+    // Removed event listener
+  }
+} catch {}
+
+renderGallery('all');
