@@ -171,7 +171,7 @@ if (featuredTrack && featuredCards.length) {
 /////////////////////////////////////////////
 // ========== CATEGORIES FILTER ==========
 // WhatsApp configuration (set your number below, e.g., '573001112233')
-const WHATSAPP_NUMBER = '573143243707';
+const WHATSAPP_NUMBER = '573212941125';
 function getWhatsAppLink(item) {
   if (!WHATSAPP_NUMBER) return null;
   const msg = `Hola Joyería Indio, me interesa ${item.name} (${formatPrice(item.price)}). ¿Disponibilidad y tiempos?`;
